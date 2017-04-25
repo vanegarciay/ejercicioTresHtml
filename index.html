@@ -4,19 +4,49 @@
     <meta charset="UTF-8">
     <title>Convertidor de Celsius fahrenheit</title>
 </head>
+<style type="text/css">
+    html {
+        margin: 0;
+        padding: 0;
+    } 
+    body {
+        font-family: sans-serif;
+        background: #edf7f6;
+        padding: 2em;
+    }
+    table {
+        margin: 0 auto;
+    }
+    table, th {
+        text-align: center;
+        border: 0;
+    }
+    input {
+        font-size: 20px;
+        text-align: center;
+        font-weight: bold;
+    }
+    input, button {
+        width: 100%;
+        height: 50px;
+    }
+</style>
 <body>
-    <table border="1">
+    <table>
         <tr>
-        <td>Fahrenheit</td>
-        <td><input type="number" id="fahrenheit"></td>            
+            <th>Celsius</th>
+            <th>Fahrenheit</th>          
+   
         </tr>
-
         <tr>
-        <td>Celsius</td>
-        <td><input type="number" id="celsius"></td>   
+            <td><input type="number" id="celsius"></td>
+            <td><input type="number" id="fahrenheit" readonly></td>            
+        </tr>
+        <tr>
+            <td colspan="2"><button type="button" onclick="convertirCelsius(); return false">Calcular</button></td>
         </tr>
     </table>
-    <button type="button" onclick="convertirCelsius(); return false">Calcular</button>
+    
     <script src="assets/js/javascript.js"></script>    
 </body>
 </html>
